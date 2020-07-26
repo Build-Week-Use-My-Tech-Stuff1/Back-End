@@ -91,27 +91,6 @@ router.post('/:id', (req, res) => {
         })
 })
 
-// return updated user info
-router.put('/:id', (req, res) => {
-    Users.findById(req.params.id)
-        .then(user => {
-            if (user) {
-                Users.update(req.body, req.params.id)
-                    .then(changed => {
-                        res.status(200).json(changed);
-                    })
-                    .catch(err => {
-                        res.status(500).json(err);
-                    })
-            } else {
-                res.status(404).json({ error: 'user could not be found' });
-            }
-        })
-        .catch(err => {
-            res.status(500).json(err);
-        })
-})
-
 // return removed user info
 router.delete('/:id', (req, res) => [
     Users.findById(req.params.id)

@@ -15,7 +15,7 @@ function getAll() {
 }
 // individual item by id
 function findById(id) {
-    return db('items').where({ id });
+    return db('items').where({ id }).first();
 }
 // add item
 async function add(item) {
