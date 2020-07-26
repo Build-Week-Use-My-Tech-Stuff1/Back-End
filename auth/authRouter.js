@@ -59,31 +59,28 @@ router.post("/login", (req, res) => {
 
 router.put('/users/:id', (req, res) => {
     if (req.body.password) {
-        console.log(req.body.password);
         const rounds = process.env.BCRYPT_ROUNDS || 8;
-
         const hash = bcryptjs.hashSync(req.body.password, rounds);
-
         req.body.password = hash;
-
-        Users.findById(req.params.id)
-            .then(user => {
-                if (user) {
-                    Users.update(req.body, req.params.id)
-                        .then(changed => {
-                            res.status(200).json(changed);
-                        })
-                        .catch(err => {
-                            res.status(500).json(err);
-                        })
-                } else {
-                    res.status(404).json({ error: 'user could not be found' });
-                }
-            })
-            .catch(err => {
-                res.status(500).json(err);
-            })
     }
+    
+    Users.findById(req.params.id)
+        .then(user => {
+            if (user) {
+                Users.update(req.body, req.params.id)
+                    .then(changed => {
+                        res.status(200).json(changed);
+                    })
+                    .catch(err => {
+                        res.status(500).json(err);
+                    })
+            } else {
+                res.status(404).json({ error: 'user could not be found' });
+            }
+        })
+        .catch(err => {
+            res.status(500).json(err);
+        })
 })
 
 function makeJwt(user) {
