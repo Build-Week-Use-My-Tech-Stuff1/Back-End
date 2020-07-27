@@ -11,10 +11,10 @@ to be made monday.
 # Tech Endpoints -- authentication required
 | Request | URL | Description |
 | ------- | --- | ----------- |
-| GET | api/tech | get all tech items |
-| GET | api/tech/:id | get tech item with specific id |
-| PUT | api/tech/:id | edit specific tech item |
-| DELETE | api/tech/:id | delete specific tech item |
+| GET | api/items | get all tech items |
+| GET | api/items/:id | get tech item with specific id |
+| PUT | api/items/:id | edit specific tech item |
+| DELETE | api/items/:id | delete specific tech item |
 
 
 # Users Endpoints
