@@ -42,5 +42,5 @@ to be made monday.
 | name | string | yes | no | item name |
 | description | string | yes | no | item description |
 | condition | string | yes | no | item condition |
-| price | float | no | no | item's price per period |
+| price | float | yes | no | item's price per period |
 | period | integer | yes | no | period to rent out |
