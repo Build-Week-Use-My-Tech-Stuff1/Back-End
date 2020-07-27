@@ -2,9 +2,6 @@
   "name": "Back-End",
   "version": "1.0.0",
   "description": "BE",
-  "engines": {
-    "node": "12.18.2"
-  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -36,6 +33,7 @@
     "helmet": "^3.23.3",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.2",
+    "nodejs": "0.0.0",
     "sqlite3": "^5.0.0"
   }
 }
