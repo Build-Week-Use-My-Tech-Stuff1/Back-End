@@ -20,7 +20,7 @@ setInterval(function () {
         .catch(err => {
             res.status(500).json(err);
         })
-}, 86400000)
+}, 5000)
 
 router.get('/', (req, res) => {
     res.status(200).json(rand);
