@@ -5,6 +5,7 @@ const cors = require("cors");
 const authRouter = require("../auth/authRouter.js");
 const usersRouter = require("../users/usersRouter.js");
 const itemsRouter = require("../tech/itemRouter.js");
+const randomItemRouter = require("../tech/randomItemRouter.js");
 const restricted = require("../auth/restrictedMiddleware.js");
 
 const server = express();
@@ -14,6 +15,7 @@ server.use(express.json());
 server.use(cors());
 
 server.use("/api", authRouter);
+server.use("/api/random", randomItemRouter)
 server.use("/api/users", restricted, usersRouter);
 server.use("/api/items", restricted, itemsRouter);
 
