@@ -31,7 +31,34 @@ exports.seed = function (knex) {
           "period": 24,
           "ownerId": 3,
           "renterId": 2
-        }
+        },
+        {
+          "name": "Nintendo Switch",
+          "description": "Animal Crossing Edition",
+          "condition": "Open Box",
+          "price": 25,
+          "period": 6,
+          "ownerId": 3,
+          "renterId": null
+        },
+        {
+          "name": "Samsung Galaxy S10",
+          "description": "phone things",
+          "condition": "like new",
+          "price": 30,
+          "period": 4,
+          "ownerId": 2,
+          "renterId": null
+        },
+        {
+          "name": "Speakers",
+          "description": "big speakers",
+          "condition": "New",
+          "price": 17,
+          "period": 5,
+          "ownerId": 1,
+          "renterId": null
+        },
       ]);
     });
 };
