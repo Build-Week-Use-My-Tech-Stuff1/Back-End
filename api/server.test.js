@@ -378,7 +378,7 @@ describe('/api/random', function () {
         return request(server)
             .get('/api/random')
             .then(res => {
-                expect(res.body.name).toEqual(expect.anything());
+                expect(res.body.name).toBeDefined();
             })
     })
 })
