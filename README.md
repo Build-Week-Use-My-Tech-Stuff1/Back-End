@@ -7,7 +7,6 @@ https://bw-usemytechstuff.herokuapp.com/
 | POST | /api/register | register a new user |
 | POST | /api/login | login a user |
 
-
 # Tech Endpoints -- authentication required
 | Request | URL | Description |
 | ------- | --- | ----------- |
@@ -16,8 +15,12 @@ https://bw-usemytechstuff.herokuapp.com/
 | PUT | api/items/:id | edit specific tech item |
 | DELETE | api/items/:id | delete specific tech item |
 
+# Random Tech Endpoint
+| Request | URL | Description |
+| ------- | --- | ----------- |
+| GET | api/random | get tech item of the day, changes every 24 hours |
 
-# Users Endpoints
+# Users Endpoints -- authentication required
 | Request | URL | Description |
 | ------- | --- | ----------- |
 | GET | api/users | get all users |
